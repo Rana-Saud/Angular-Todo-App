@@ -1,0 +1,132 @@
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    padding: 40px 30px 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem;
+}
+
+.app-title {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.app-title h2,
+.app-title i {
+    color: #002765;
+}
+
+.app-title i {
+    font-size: 26px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+}
+
+input {
+    width: auto;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 12px;
+    font-size: 17px;
+    padding-left: 20px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    /* padding: 15px 50px; */
+    border-radius: 30px;
+    background-color: #ff5945;
+    color: #fff;
+    font-size: 18px;
+    width: 25%;
+    height: 50px;
+    transition: all .25s ease;
+}
+
+button:hover {
+    filter: brightness(.8);
+}
+
+@media screen and (max-width: 400px) {
+    button {
+        padding: 15px;
+        border-radius: 0 30px 30px 0;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    height: auto;
+    max-height: 500px;
+    overflow: auto
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.task-list-item {
+    background-color: #edeef0;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border: 2px solid;
+}
+
+.task-list-item-label {
+    display: flex;
+    align-items: flex-start;
+    color: #001f5a;
+    margin-right: 8px;
+    font-size: 14px;
+    line-height: 24px;
+    position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.delete-btn,
+.edit-btn {
+    margin-left: auto;
+    display: block;
+    width: 25px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-image: url('../assets/images/delete.svg');
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-image: url('../assets/images/edit.svg');
+}

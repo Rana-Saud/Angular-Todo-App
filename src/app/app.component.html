@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="todo-app">
+    <div class="app-title">
+      <h2>To-do App</h2>
+      <i class="fa-solid fa-book-bookmark"></i>
+    </div>
+    <div class="row">
+      <input type="text" id="input-box" placeholder="Add your tasks" [(ngModel)]="todoText" autocomplete="off">
+      <button type="button" (click)="addTodoItem()">Add</button>
+    </div>
+    <ul id="list-container">
+      <li class="task-list-item" *ngFor="let item of todoList; index as i"
+        [ngStyle]="{'border-color': colors[i%colors.length]}">
+        <label class="task-list-item-label">
+          <span>{{item.name}}</span>
+        </label>
+        <div class="d-flex">
+          <span title="Delete Task" class="edit-btn" (click)="editTodoItem(item.id)"></span>
+          <span title="Edit Task" class="delete-btn" (click)="deleteTodoItem(item.id)"></span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
